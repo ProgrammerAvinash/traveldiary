@@ -1,0 +1,19 @@
+.Categories {
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+  padding: 1rem;
+}
+
+.cities {
+  display: inline;
+  border: 1px black solid;
+  height: 2rem;
+  width: 6rem;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #ff6600;
+  cursor: pointer;
+  /* align-items: center; */
+}
