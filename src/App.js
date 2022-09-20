@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import Categories from "./Categories";
-import "./styles.css";
+import "./App.css";
 
 function App() {
+  var [Cities, setCities] = useState("");
+
   var cityCategories = {
     pune: ["shaniwar wada", "Dagdushet Ganpati", "Icskon Temple"],
     mumbai: ["Marine Drive", "Rani Baug", "Taraporevala Aquarium"],
     Amritsar: ["Golden Temple", "Jallianwala Baug", "Partition Museum"],
   };
 
+  var CitiesArray = Object.keys(cityCategories);
+  var citiesMapArray = CitiesArray.map((item) => {
+    return item;
+  });
+  function onCitiesClicked() {
+    console.log("helo");
+  }
   return (
     <div className="App">
       <h1 className="heading">
@@ -20,7 +29,7 @@ function App() {
       </h1>
       <p>Checkout Tourist Places to Visit in Cities</p>
       <div className="Categories">
-        <Categories City="Pune" />
+        <Categories onClick={onCitiesClicked} City="Pune" />
         <Categories City="Mumbai" />
         <Categories City="Amritsar" />
       </div>
