@@ -7,9 +7,21 @@ function App() {
   var [places, setPlaces] = useState("");
 
   var cityCategories = {
-    Pune: ["  Icskon Temple ", " Dagdushet Ganpati ", " Shaniwar wada  "],
-    Mumbai: [" Marine Drive  ", "Rani Baug", " Taraporevala Aquarium "],
-    Amritsar: [" Golden Temple ", " Jallianwala Baug ", " Partition Museum "],
+    Pune: [
+      "  Icskon Temple : 4/5 ",
+      " Dagdushet Ganpati : 4/5 ",
+      " Shaniwar wada  4/5",
+    ],
+    Mumbai: [
+      " Marine Drive : 3/5 ",
+      "Rani Baug : 4/5",
+      " Taraporevala Aquarium : 4/5",
+    ],
+    Amritsar: [
+      " Golden Temple : 4.5/5 ",
+      " Jallianwala Baug : 4.5/5",
+      " Partition Museum : 3.5/5 ",
+    ],
   };
 
   var CitiesArray = Object.keys(cityCategories);
