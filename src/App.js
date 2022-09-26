@@ -7,9 +7,9 @@ function App() {
   var [places, setPlaces] = useState("");
 
   var cityCategories = {
-    pune: [" shaniwar wada ", "Dagdushet Ganpati ", " Icskon Temple  "],
-    mumbai: [" Marine Drive  ", "Rani Baug", " Taraporevala Aquarium"],
-    Amritsar: [" Golden Temple ", " Jallianwala Baug ", " Partition Museum"],
+    Pune: ["  Icskon Temple ", " Dagdushet Ganpati ", " Shaniwar wada  "],
+    Mumbai: [" Marine Drive  ", "Rani Baug", " Taraporevala Aquarium "],
+    Amritsar: [" Golden Temple ", " Jallianwala Baug ", " Partition Museum "],
   };
 
   var CitiesArray = Object.keys(cityCategories);
@@ -29,7 +29,6 @@ function App() {
   var placesArray = [];
   placesArray = places;
 
-  console.log("placesArray", placesArray);
   return (
     <div className="App">
       <h1 className="heading">
@@ -47,7 +46,15 @@ function App() {
               <button
                 onClick={() => onCitiesClicked(item)}
                 key={item}
-                style={{ padding: "1rem", margin: "10px", cursor: "pointer" }}
+                style={{
+                  border: " 0.5px black solid",
+                  width: "6rem",
+                  borderRadius: "5px",
+                  backgroundColor: "#ff6600",
+                  padding: "1rem",
+                  margin: "10px",
+                  cursor: "pointer",
+                }}
               >
                 {item}
               </button>
@@ -61,12 +68,12 @@ function App() {
 
       <ul>
         {Object.values(places).map((place) => {
-          console.log(place);
-
           return (
-            <li key={place} style={{ color: "black" }}>
-              {place}
-            </li>
+            <div className="placeContainer" key={place}>
+              <li key={place} style={{ color: "black" }}>
+                {place}
+              </li>
+            </div>
           );
         })}
       </ul>

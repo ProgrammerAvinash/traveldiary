@@ -9,3 +9,18 @@ img {
   float: left;
   height: 80px;
 }
+
+.placeContainer {
+  height: 2rem;
+  border: 1px solid #519c95;
+  margin: 5px;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+  padding: 1rem;
+  list-style: none;
+}
