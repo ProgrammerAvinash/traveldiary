@@ -63,7 +63,11 @@ function App() {
         {Object.values(places).map((place) => {
           console.log(place);
 
-          return <li style={{ color: "black" }}>{place}</li>;
+          return (
+            <li key={place} style={{ color: "black" }}>
+              {place}
+            </li>
+          );
         })}
       </ul>
     </div>
